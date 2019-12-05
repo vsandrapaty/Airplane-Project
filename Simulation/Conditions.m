@@ -14,6 +14,7 @@ classdef Conditions
         initialConditions
         tOffset
         date
+        windArray
     end
     
     %% Constructor

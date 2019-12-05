@@ -3,7 +3,7 @@ classdef Paraset
     %   Detailed explanation goes here
     
     properties
-        numParachutes
+       numParachutes
        %individual parachute mass
        parachuteMass %kg
        diameter %m
