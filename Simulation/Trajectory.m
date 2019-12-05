@@ -1,18 +1,14 @@
-classdef Airplane
-    %AIRPLANE Summary of this class goes here
+classdef Trajectory
+    %SIMULATION Summary of this class goes here
     %   Detailed explanation goes here
     
     properties
-        totalMass
-        detachedMass
-        fuelMass
-        detachedSurfaceArea
-        
+        Property1
     end
     
     methods
-        function obj = Airplane(inputArg1,inputArg2)
-            %AIRPLANE Construct an instance of this class
+        function obj = Simulation(inputArg1,inputArg2)
+            %SIMULATION Construct an instance of this class
             %   Detailed explanation goes here
             obj.Property1 = inputArg1 + inputArg2;
         end

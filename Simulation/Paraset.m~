@@ -17,8 +17,7 @@ classdef Paraset
     properties
        shape
        chuteMaterial
-       tetherMaterial
-       
+       tetherMaterial    
     end
     
     methods
