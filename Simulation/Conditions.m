@@ -10,8 +10,6 @@ classdef Conditions
     properties
         location 
         stationCode
-        %[z,zdot,x,xdot,y,ydot]
-        initialConditions
         tOffset
         date
         windArray
@@ -19,11 +17,10 @@ classdef Conditions
     
     %% Constructor
     methods
-        function obj = Conditions(location,initialConditions,temperature,date)
+        function obj = Conditions(location,temperature,date)
             %CONDITIONS Construct an instance of this class
             %   Detailed explanation goes here
             obj.location = location;
-            obj.initialConditions = initialConditions;
            
             [~,~,T] = atmos(0);
             tOffset = T - temperature;
