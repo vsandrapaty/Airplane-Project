@@ -50,5 +50,13 @@ classdef Airplane
             XDrag = (1/2) * density * speed^2 * obj.frontalReferenceArea * obj.XDragCoefficient + obj.Parasets(1).getDrag(density, speed);
         end
     end
+%% Getter
+    methods
+        function ZDrag = getZDrag(obj, density, speed)
+            %METHOD1 Summary of this method goes here
+            %   Detailed explanation goes here
+            ZDrag = (1/2) * density * speed^2 * obj.bottomoReferenceArea * obj.ZDragCoefficient + obj.Parasets(2).getDrag(density, speed) + obj.Parasets(3).getDrag(density, speed);
+        end
+    
 end
 
