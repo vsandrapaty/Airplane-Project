@@ -1,5 +1,5 @@
 function [time,states] = recovery(airplane,conditions)
-    initialStates = airplane.getInitialConditions(); %UnWritten
+    initialStates = airplane.getInitialConditions();
     timeSpan =[0 5000];
     firstTimeStep = 0.1; %first time-step size     
     options = odeset('Events',@stop,'InitialStep',firstTimeStep,'RelTol',1e-6,'AbsTol',1e-6,'MaxStep',1); %Stop function unwritten
@@ -16,7 +16,7 @@ function [time,states] = recovery(airplane,conditions)
     Py = states(5); 
     Pz = states(6); 
     
-    g = conditions.getGravity(); %Unwritten
+    g = conditions.getGravity();
     m = airplane.getMass();
     rho = conditions.getDensity();
     
@@ -30,7 +30,7 @@ function [time,states] = recovery(airplane,conditions)
     
     if (earthRelVelocity(1) <= 10)    
         % Column vector for wind in x, y, z
-        wind = conditions.getWind(); %UnWritten
+        wind = conditions.getWind();
         
         % Column vector for wind relative velocity in x, y, z
         windRelVelocity = earthRelVelocity - wind;

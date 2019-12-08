@@ -3,14 +3,15 @@ classdef Trajectory
     %   Detailed explanation goes here
     
     properties
-        Property1
+        trajectory
     end
     
+    %% Constructor
     methods
-        function obj = Simulation(inputArg1,inputArg2)
+        function obj = trajectory(airplane,conditions)
             %SIMULATION Construct an instance of this class
             %   Detailed explanation goes here
-            obj.Property1 = inputArg1 + inputArg2;
+            obj.trajectory = recovery(airplane,conditions);
         end
         
         function outputArg = method1(obj,inputArg)
@@ -19,5 +20,12 @@ classdef Trajectory
             outputArg = obj.Property1 + inputArg;
         end
     end
+    methods
+        function = plotTrajectory3D(obj)
+           x = obj.trajectory(:,2);
+           y = obj.trajectory(:,3);
+           z = obj.trajectory(:,4);
+           plot3(x,y,z);
+        end
 end
 
