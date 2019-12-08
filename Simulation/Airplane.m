@@ -1,25 +1,25 @@
 classdef Airplane
     %AIRPLANE Summary of this class goes here
     %   Detailed explanation goes here
-    
+
     properties
         Mass
         bottomReferenceArea
         frontalReferenceArea
     end
-    
+
     properties
         Name
         NumPassengers
         InitialConditions
     end
-    
+
     properties
         Parasets
         XDragCoefficient
         ZDragCoefficient
     end
-    
+
     methods
         function obj = Airplane(Mass, bottomReferenceArea, frontalReferenceArea, Name, NumPassengers, InitialConditions, Parasets, XDragCoefficient, ZDragCoefficient)
             %AIRPLANE Construct an instance of this class
@@ -33,9 +33,9 @@ classdef Airplane
             obj.Parasets = Parasets;
             obj.XDragCoefficient = XDragCoefficient;
             obj.ZDragCoefficient = ZDragCoefficient;
-            
+
         end
-        
+
         function outputArg = method1(obj,inputArg)
             %METHOD1 Summary of this method goes here
             %   Detailed explanation goes here
@@ -59,4 +59,3 @@ classdef Airplane
         end
     
 end
-
