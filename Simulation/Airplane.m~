@@ -2,28 +2,52 @@ classdef Airplane
     %AIRPLANE Summary of this class goes here
     %   Detailed explanation goes here
     
-    properties(Constant)
-        earthMass = 5.972*10^24; %kg
-        g = 
-        
     properties
-        totalMass
-        detachedMass
-        
-        
+        Mass
+        bottomReferenceArea
+        frontalReferenceArea
+    end
+    
+    properties
+        Name
+        NumPassengers
+        InitialConditions
+    end
+    
+    properties
+        Parasets
+        XDragCoefficient
+        ZDragCoefficient
     end
     
     methods
-        function obj = Airplane(inputArg1,inputArg2)
+        function obj = Airplane(Mass, bottomReferenceArea, frontalReferenceArea, Name, NumPassengers, InitialConditions, Parasets, XDragCoefficient, ZDragCoefficient)
             %AIRPLANE Construct an instance of this class
             %   Detailed explanation goes here
-            obj.Property1 = inputArg1 + inputArg2;
+            obj.Mass = Mass;
+            obj.bottomReferenceArea = bottomReferenceArea;
+            obj.frontalReferenceArea = frontalReferenceArea;
+            obj.Name = Name;
+            obj.NumPassengers = NumPassengers;
+            obj.InitialConditions = InitialConditions;
+            obj.Parasets = Parasets;
+            obj.XDragCoefficient = XDragCoefficient;
+            obj.ZDragCoefficient = ZDragCoefficient;
+            
         end
         
         function outputArg = method1(obj,inputArg)
             %METHOD1 Summary of this method goes here
             %   Detailed explanation goes here
             outputArg = obj.Property1 + inputArg;
+        end
+    end
+%% Getter
+    methods
+        function XDrag = getXDrag(obj, density, speed)
+            %METHOD1 Summary of this method goes here
+            %   Detailed explanation goes here
+            XDrag = (1/2) * density * speed^2 * obj.frontalReferenceArea * obj.XDragCoefficient + obj.Parasets(1).;
         end
     end
 end
