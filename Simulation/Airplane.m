@@ -7,7 +7,7 @@ classdef Airplane
         detachedMass
         fuelMass
         detachedSurfaceArea
-        
+ 
     end
     
     methods
