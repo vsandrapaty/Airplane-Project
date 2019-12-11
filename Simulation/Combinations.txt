@@ -49,3 +49,5 @@ Airplane Types
             Long Range Cruising Speed = _____
             Number of Passengers = _____
             Frontal Reference Area = ______
+
+Target Terminal Velocity: 6-7 m/s

@@ -12,7 +12,7 @@ classdef Airplane
         Name
         NumPassengers
         % Column Vector containing (x,y,z) (x dot, y dot, z dot)
-        InitialConditions
+        initialConditions
     end
 
     properties
@@ -22,7 +22,7 @@ classdef Airplane
     end
 
     methods
-        function obj = Airplane(Mass, bottomReferenceArea, frontalReferenceArea, Name, NumPassengers, InitialConditions, Parasets, XDragCoefficient, ZDragCoefficient)
+        function obj = Airplane(Mass, bottomReferenceArea, frontalReferenceArea, Name, NumPassengers, initialConditions, Parasets, XDragCoefficient, ZDragCoefficient)
             %AIRPLANE Construct an instance of this class
             %   Detailed explanation goes here
             obj.Mass = Mass;
@@ -30,7 +30,7 @@ classdef Airplane
             obj.frontalReferenceArea = frontalReferenceArea;
             obj.Name = Name;
             obj.NumPassengers = NumPassengers;
-            obj.InitialConditions = InitialConditions;
+            obj.initialConditions = initialConditions;
             obj.Parasets = Parasets;
             obj.XDragCoefficient = XDragCoefficient;
             obj.ZDragCoefficient = ZDragCoefficient;
@@ -59,9 +59,10 @@ classdef Airplane
             ZDrag = (1/2) * density * speed^2 * obj.bottomoReferenceArea * obj.ZDragCoefficient + obj.Parasets(2).getDrag(density, speed) + obj.Parasets(3).getDrag(density, speed);
         end
         function Mass = getMass(obj)
-            Mass = obj.Mass
+            Mass = obj.Mass;
         end
         function initialConditions = getinitialConditions(obj)
-            initialConditions = obj.initialConditions
+            initialConditions = obj.initialConditions;
         end
+    end
 end
