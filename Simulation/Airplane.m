@@ -56,12 +56,12 @@ classdef Airplane
         function ZDrag = getZDrag(obj, density, speed)
             %METHOD1 Summary of this method goes here
             %   Detailed explanation goes here
-            ZDrag = (1/2) * density * speed^2 * obj.bottomoReferenceArea * obj.ZDragCoefficient + obj.Parasets(2).getDrag(density, speed) + obj.Parasets(3).getDrag(density, speed);
+            ZDrag = (1/2) * density * speed^2 * obj.bottomReferenceArea * obj.ZDragCoefficient + obj.Parasets(2).getDrag(density, speed) + obj.Parasets(3).getDrag(density, speed);
         end
         function Mass = getMass(obj)
             Mass = obj.Mass;
         end
-        function initialConditions = getinitialConditions(obj)
+        function initialConditions = getInitialConditions(obj)
             initialConditions = obj.initialConditions;
         end
     end

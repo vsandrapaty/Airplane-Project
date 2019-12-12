@@ -6,7 +6,7 @@ function [time,states] = recovery(airplane,conditions)
     [time,states] = ode45(@descent,timeSpan,initialStates,options);
     
     %% State -> State Derivatives Function
-    function stateDerivatives = descent(states)
+    function stateDerivatives = descent(time, states)
     % Positions
     x = states(1);
     y = states(2);    
@@ -16,9 +16,9 @@ function [time,states] = recovery(airplane,conditions)
     Py = states(5); 
     Pz = states(6); 
     
-    g = conditions.getGravity();
+    g = conditions.getGravity(z);
     m = airplane.getMass();
-    rho = conditions.getDensity();
+    rho = conditions.getDensity(z);
     
     % Column vector for momentum in x, y, z
     momentum = [Px; Py; Pz];
@@ -26,11 +26,12 @@ function [time,states] = recovery(airplane,conditions)
     earthRelVelocity = momentum/m; 
     
     forceXDir = airplane.getXDrag(rho,-earthRelVelocity(1));
+    forceYDir = 0;
     forceZDir = airplane.getZDrag(rho,-earthRelVelocity(3));
     
     if (earthRelVelocity(1) <= 25)    
         % Column vector for wind in x, y, z
-        wind = conditions.getWind();
+        wind = conditions.getWind(z);
         
         % Column vector for wind relative velocity in x, y, z
         windRelVelocity = earthRelVelocity - wind;
@@ -52,6 +53,7 @@ function [time,states] = recovery(airplane,conditions)
     stateDerivatives(4) = forceXDir;
     stateDerivatives(5) = forceYDir;
     stateDerivatives(6) = forceZDir;
+    stateDerivatives = transpose(stateDerivatives);
     end
 end
 
