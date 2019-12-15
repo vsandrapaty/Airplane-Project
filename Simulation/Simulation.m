@@ -17,3 +17,6 @@ A380 = Airplane(560000,361.8552,871.4305,"Airbus A380",555,[0;0;12801.6;16326800
      trajectory1 = Trajectory(A380, santaTeresa);
 %% Create a number of Paraset objects to be simulated
     % Start by trying 1/2, 2x, and 8x 
+
+    
+    

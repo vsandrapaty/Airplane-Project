@@ -3,6 +3,8 @@ Parachute Kevlar
     Mass/Area = 147.418 kg / 466.98 m^2 = 0.3157
     tetherMass = 44.9056 kg
     canopyMass = 80.7394 kg
+    canopyMass/Area = 80.7394/466.98
+    tetherMass/Area = 44.9056/466.98
 Airplane Types
     Airbus A380
         Maximum Take-off Weight = 560,000 kg

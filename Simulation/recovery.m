@@ -2,7 +2,7 @@ function [time,states] = recovery(airplane,conditions)
     initialStates = airplane.getInitialConditions();
     timeSpan =[0 5000];
     firstTimeStep = 0.1; %first time-step size     
-    options = odeset('Events',@stop,'InitialStep',firstTimeStep,'RelTol',1e-6,'AbsTol',1e-6,'MaxStep',1);
+    options = odeset('Events',@stop,'InitialStep',firstTimeStep,'RelTol',1e-2,'AbsTol',1e-4,'MaxStep',1);
     [time,states] = ode45(@descent,timeSpan,initialStates,options);
     
     %% State -> State Derivatives Function
@@ -25,25 +25,25 @@ function [time,states] = recovery(airplane,conditions)
     % Column vector for earth relative velocity in x, y, z
     earthRelVelocity = momentum/m; 
     
-    forceXDir = airplane.getXDrag(rho,-earthRelVelocity(1));
+    forceXDir = -airplane.getXDrag(rho,earthRelVelocity(1));
     forceYDir = 0;
-    forceZDir = airplane.getZDrag(rho,-earthRelVelocity(3));
+    forceZDir = airplane.getZDrag(rho,earthRelVelocity(3)) - m*g;
     
-    if (earthRelVelocity(1) <= 25)    
-        % Column vector for wind in x, y, z
-        wind = conditions.getWind(z);
-        
-        % Column vector for wind relative velocity in x, y, z
-        windRelVelocity = earthRelVelocity - wind;
-        windRelVelocityUnit = windRelVelocity/norm(windRelVelocity);
-        
-        forceMag = airplane.getZDrag(rho,norm(windRelVelocity));
-        % Column vector for force on airplane in x, y, z
-        force = forceMag * -windRelVelocityUnit -m*g;
-        forceXDir = force(1);
-        forceYDir = force(2);
-        forceZDir = force(3);
-    end
+%     if (earthRelVelocity(1) <= 25)    
+%         % Column vector for wind in x, y, z
+%         wind = conditions.getWind(z);
+%         
+%         % Column vector for wind relative velocity in x, y, z
+%         windRelVelocity = earthRelVelocity - wind;
+%         windRelVelocityUnit = windRelVelocity/norm(windRelVelocity);
+%         
+%         forceMag = airplane.getZDrag(rho,norm(windRelVelocity));
+%         % Column vector for force on airplane in x, y, z
+%         force = forceMag * windRelVelocityUnit -m*g;
+%         forceXDir = force(1);
+%         forceYDir = force(2);
+%         forceZDir = force(3);
+%     end
     
     % Velocity is equal to change in position
     stateDerivatives(1) = earthRelVelocity(1);
