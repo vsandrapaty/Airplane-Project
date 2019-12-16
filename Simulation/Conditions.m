@@ -7,7 +7,7 @@ classdef Conditions
         G = 6.67*10^-11; %(N*m2^2)/(kg^2)
         earthRadius = 6371071.027; %m
     end
-    
+    a = [100:1:200];
     properties
         location 
         stationCode

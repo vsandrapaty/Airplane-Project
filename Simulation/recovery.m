@@ -25,7 +25,7 @@ function [time,states] = recovery(airplane,conditions)
     % Column vector for earth relative velocity in x, y, z
     earthRelVelocity = momentum/m; 
     
-    forceXDir = airplane.getXDrag(rho,-earthRelVelocity(1));
+    forceXDir = airplane.getXDrag(rho,earthRelVelocity(1));
     forceYDir = 0;
     forceZDir = airplane.getZDrag(rho,-earthRelVelocity(3));
     
