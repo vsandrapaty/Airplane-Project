@@ -1,0 +1,88 @@
+Parachute (Kevlar, Quarter-Spherical)
+    Material = kevlar
+    Quarter-Spherical Drag Coefficient = 0.6 < x < 0.65
+    Mass/Area = 147.418 kg / 466.98 m^2 = 0.3157
+    tetherMass = 44.9056 kg
+    canopyMass = 80.7394 kg
+    canopyMass/Area = 80.7394/466.98
+    tetherMass/Area = 44.9056/466.98
+Parachute (Zylon, Quarter-Spherical)
+    Material = zylon
+    Quarter-Spherical Drag Coefficient = 0.6 < x < 0.65
+    Mass/Area = 122.016 kg / 466.98 m^2 = 0.2613
+    tetherMass = 27.2155 kg
+    canopyMass = 73.0284 kg
+    canopyMass/Area = 73.0284/466.98 m^2
+    tetherMass/Area = 27.2155 kg/466.98 m^2
+Parachute (Kevlar, 20° Conical)
+    Material = Kevlar
+    20° Conical = 0.5 < x < 0.55
+    Mass/Area = 147.418 kg / 466.98 m^2 = 0.3157
+    tetherMass = 44.9056 kg
+    canopyMass = 80.7394 kg
+    canopyMass/Area = 80.7394/466.98
+    tetherMass/Area = 44.9056/466.98
+Parachute (Zylon, 20° Conical)
+    Material = Zylon
+    20° Conical = 0.5 < x < 0.55
+    Mass/Area = 122.016 kg / 466.98 m^2 = 0.2613
+    tetherMass = 27.2155 kg
+    canopyMass = 73.0284 kg
+    canopyMass/Area = 73.0284/466.98 m^2
+    tetherMass/Area = 27.2155 kg/466.98 m^2
+Parachute (Kevlar, Flat)
+    Material = Kevlar
+    Flat = 0.45 < x < 0.5
+    Mass/Area = 147.418 kg / 466.98 m^2 = 0.3157
+    tetherMass = 44.9056 kg
+    canopyMass = 80.7394 kg
+    canopyMass/Area = 80.7394/466.98
+    tetherMass/Area = 44.9056/466.98
+Parachute (Zylon, Flat)
+    Material = Zylon
+    Flat = 0.45 < x < 0.5
+    Mass/Area = 122.016 kg / 466.98 m^2 = 0.2613
+    tetherMass = 27.2155 kg
+    canopyMass = 73.0284 kg
+    canopyMass/Area = 73.0284/466.98 m^2
+    tetherMass/Area = 27.2155 kg/466.98 m^2
+    
+    
+Airplane Types
+    Airbus A380
+        Maximum Take-off Weight = 560,000 kg
+        Maximum Landing Weight = 386,000 kg
+        Fuselage Diameter = 7.14 m
+        Cabin Length = 50.68 m
+        Reference Area = 361.8552
+        Long Range Cruising Speed = 0.85 Mach (291.55 m/s)
+        Number of Passengers = 555
+        Frontal Reference Area = 40.0393
+    Airbus A320 NEO
+            Maximum Take-off Weight = 79,000 kg
+            Maximum Landing Weight = 66,000 kg 
+            Fuselage Diameter = 3.95 m
+            Cabin Length = 27.4828
+            Reference Area = 108.5571
+            Long Range Cruising Speed = 0.7049 Mach (241.789)
+            Number of Passengers = 165
+            Frontal Reference Area = 12.2537
+    Boeing 737 800
+            Maximum Take-off Weight = 79,002 kg
+            Maximum Landing Weight = 66,349 kg 
+            Fuselage Diameter = 3.76 m
+            Cabin Length = 28 m
+            Reference Area = 105.28
+            Long Range Cruising Speed = Mach 0.785 ( 269.255 m/s)
+            Number of Passengers = 189
+            Frontal Reference Area = 11.1033
+    Boeing 767 300ER
+            Maximum Take-off Weight = 186,880 kg 
+            Maximum Landing Weight = 145.150 kg 
+            Fuselage Diameter = ______
+            Cabin Length = ______
+            Reference Area = ______
+            Long Range Cruising Speed = _____
+            Number of Passengers = _____
+            Frontal Reference Area = ______
+Target Terminal Velocity: 6-7 m/s
