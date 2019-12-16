@@ -1,4 +1,4 @@
-Parachute
+Parachute Kevlar
     Quarter-Spherical Drag Coefficient = 0.6 < x < 0.65
     Mass/Area = 147.418 kg / 466.98 m^2 = 0.3157
     tetherMass = 44.9056 kg
@@ -10,7 +10,7 @@ Airplane Types
         Fuselage Diameter = 7.14 m
         Cabin Length = 50.68 m
         Reference Area = 361.8552
-        Long Range Cruising Speed = 0.85 Mach
+        Long Range Cruising Speed = 0.85 Mach (291.55 m/s)
         Number of Passengers = 555
         Frontal Reference Area = 40.0393
     Airbus A320 NEO
