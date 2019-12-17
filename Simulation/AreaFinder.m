@@ -1,7 +1,7 @@
 function [A380, trajectories, bestDifference, indexOfBestDifference, diameterArray] = AreaFinder(EPZwinds)
 %m/s
 targetVelocity = 6;
-diameterArray = [200:1:400];
+diameterArray = [50:1:99];
 massPerArea = 147.418 / 466.98;
 inflatedOverNominalDiameter = 5/6;
 canopyMassPerArea = 0.1729;
