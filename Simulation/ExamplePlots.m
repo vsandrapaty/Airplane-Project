@@ -1,6 +1,6 @@
 % Terminal Velocity vs Parachute Diameter 380
 for i = 1:length(diameterArray380)
-     landingVelocity380(i) = trajectories380(i).trajectoryVals(end,6)/A380.getMass;
+     landingVelocity380(i) = trajectories380(i).trajectoryVals(end,6)/airplaneMass380;
 end
 plot(diameterArray380,landingVelocity380)
 

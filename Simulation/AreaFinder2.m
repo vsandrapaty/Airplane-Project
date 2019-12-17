@@ -1,7 +1,7 @@
 function [A320, trajectories, bestDifference, indexOfBestDifference, diameterArray] = AreaFinder2(EPZwinds)
 %m/s
 targetVelocity = 6;
-diameterArray = [100:1:300];
+diameterArray = [60:1:99];
 inflatedOverNominalDiameter = 5/6;
 canopyMassPerArea = 0.1729;
 tetherMassPerArea = 0.0962;
