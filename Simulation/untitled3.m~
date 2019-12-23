@@ -1,0 +1,12 @@
+%% The path that the plane took in three dimensions after the plane deployed 380
+trajectories380(133).plotTrajectory32();
+%% The path that the plane took in three dimensions after the plane deployed 320
+trajectories320(32).plotTrajectory3D();
+%% X velocity vs time (A380)
+plot(trajectories380(133).time,trajectories380(133).trajectoryVals(:,4)/airplaneMass380
+
+%% X velocity vs time (A320)
+
+%% Z velocity vs time (A380)
+
+%% Z velocity vs time (A320)
